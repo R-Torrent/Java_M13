@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "a9f40d86-5c9b-45d1-b524-f35d2a3ae7a1",
+		"name": "M13_Milestone1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Query general",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/empleats",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"empleats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query per un empleat que no existeix",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/empleats/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"empleats",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear un empleat nou",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\": \"Harry\",\r\n    \"cognom\": \"Belafonte\",\r\n    \"feina\": \"OFICIAL\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/empleats",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"empleats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar empleat #6",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"feina\": \"MARINER\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/empleats/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"empleats",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Esborrar empleat #4",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/empleats/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"empleats",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query de tots els empleats amb categoria MARINER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/empleatsFeina/MARINER",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"empleatsFeina",
+						"MARINER"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
